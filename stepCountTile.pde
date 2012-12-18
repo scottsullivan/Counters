@@ -1,30 +1,34 @@
-float angle = 0.0;
-PImage img;
+float inCircle = 0.0;
+float outCircle = 5;
+float rad = PI/4;
+float deg = degrees(rad);
+
 
 void setup() {
   size(300, 300);
   smooth();
   background(#FFFFFF);
   stroke(250, 121, 78, 50);
-  strokeWeight(angle);
-  img = loadImage("300.jpeg");
-  image(img, 0, 0);
+  //frameRate(1);
 }
 
 void draw() {
-  //background(#FFFFFF);
-pushMatrix();
-  strokeWeight(angle);
+  println(deg);
+  
+  strokeWeight(1);
   translate(width / 2, height / 2);
-  rotate(angle);
-  line(angle/8, angle/8, angle, angle);
-  angle = angle + 0.2;
-  println(angle);
-  popMatrix();
-
-  if (angle > 100) {
-    angle = 5;
-    image(img, 0, 0);
+  rotate(deg/2);
+  line(inCircle, inCircle, outCircle, outCircle);
+  
+  if (deg > 59) {
+    inCircle = 6;
+    outCircle = 11;
   }
+  
+  if (deg > 73) {
+      inCircle = 12;
+    outCircle = 17;
+  }
+  deg = deg + .1;
 }
 
