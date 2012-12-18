@@ -20,12 +20,12 @@ void draw() {
   rotate(deg/2);
   line(inCircle, inCircle, outCircle, outCircle);
   
-  if (deg > 59) {
+  if (deg > 57) {
     inCircle = 6;
     outCircle = 11;
   }
   
-  if (deg > 73) {
+  if (deg > 70) {
       inCircle = 12;
     outCircle = 17;
   }
