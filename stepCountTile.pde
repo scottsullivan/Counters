@@ -1,34 +1,41 @@
-float inCircle = 0.0;
-float outCircle = 5;
-float rad = PI/4;
-float deg = degrees(rad);
+float inCircle, outCircle, moreThan = 0.0;
+int inNo = 0;
+int outNo = 10;
+
+float deg = 0;
 
 
 void setup() {
   size(300, 300);
   smooth();
   background(#FFFFFF);
-  stroke(250, 121, 78, 50);
-  //frameRate(1);
 }
 
 void draw() {
+  stroke(250, 121, 78, 50);
+  pushMatrix();
   println(deg);
-  
-  strokeWeight(1);
   translate(width / 2, height / 2);
-  rotate(deg/2);
+  rotate(deg);
+  strokeWeight(moreThan/5);
   line(inCircle, inCircle, outCircle, outCircle);
-  
-  if (deg > 57) {
-    inCircle = 6;
-    outCircle = 11;
+  popMatrix();
+
+  noStroke();
+  fill(#FFFFFF);
+  rect(0, 280, 300, 20);
+  fill(250, 121, 78);
+  text((deg / 0.0174532925), 0, 298);
+
+  if (deg > moreThan * 6.28318531) {
+    inCircle = inNo + 10;
+    outCircle = outNo + 10;
+
+    inNo = inNo + 10;
+    outNo = outNo + 10;
+    moreThan++;
   }
-  
-  if (deg > 70) {
-      inCircle = 12;
-    outCircle = 17;
-  }
-  deg = deg + .1;
+
+  deg = deg + 0.0174532925;
 }
 
