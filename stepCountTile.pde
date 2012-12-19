@@ -9,6 +9,7 @@ void setup() {
   size(300, 300);
   smooth();
   background(#FFFFFF);
+  frameRate(10);
 }
 
 void draw() {
@@ -17,7 +18,7 @@ void draw() {
   println(deg);
   translate(width / 2, height / 2);
   rotate(deg);
-  strokeWeight(moreThan/5);
+  strokeWeight(1);
   line(inCircle, inCircle, outCircle, outCircle);
   popMatrix();
 
