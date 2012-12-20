@@ -1,7 +1,8 @@
 import controlP5.*;
 ControlP5 controlP5;
 
-float inCircle, outCircle, moreThan = 0.0;
+float inCircle, moreThan = 0.0;
+float outCircle = 10; 
 int inNo = 0;
 int outNo = 10;
 
@@ -13,6 +14,7 @@ void setup() {
   smooth();
   background(#FFFFFF);
   frameRate(10);
+    setupGUI();
 }
 
 void draw() {
@@ -21,14 +23,10 @@ void draw() {
   rect(0, 280, 300, 20);
   fill(250, 121, 78);
   text((deg / 0.062831853), 0, 298);
-  setupGUI();
 }
 
 void advance() {
-
-
-
-  stroke(250, 121, 78, 50);
+  stroke(250, 121, 78);
   pushMatrix();
   println(deg);
   translate(width / 2, height / 2);

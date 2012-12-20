@@ -13,7 +13,7 @@ void setup() {
 }
 
 void draw() {
-  stroke(250, 121, 78, 50);
+  stroke(250, 121, 78);
   pushMatrix();
   println(deg);
   translate(width / 2, height / 2);
