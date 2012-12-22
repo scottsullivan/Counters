@@ -1,0 +1,22 @@
+
+float diameter;
+int[] angles = { 36, 36, 36, 36, 36, 36, 36, 36, 36, 36};
+float lastAngle = 0;
+
+void setup() {
+  size(640, 360);
+  background(100);
+  noStroke();
+  diameter = min(width, height) * 0.75;
+  noLoop();  // Run once and stop
+}
+
+
+void draw() {
+  for (int i = 0; i < angles.length; i++) {
+    fill(angles[i] * 3.0);
+    arc(width/2, height/2, diameter, diameter, lastAngle, lastAngle+radians(angles[i]));
+    lastAngle += radians(angles[i]);
+  }
+}
+
