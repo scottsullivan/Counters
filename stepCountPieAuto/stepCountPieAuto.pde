@@ -1,10 +1,4 @@
-//float inCircle, outCircle, moreThan = 0.0;
-//int inNo = 0;
-//int outNo = 10;
-//
-//float deg = 0;
-
-float diameter = 20;
+int diameter = 20;
 int angles = 1;
 float lastAngle = 0;
 int i, moreThan = 0;
