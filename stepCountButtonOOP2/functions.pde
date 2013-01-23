@@ -7,13 +7,13 @@ class Counter {
   float deg = 0.06283185307179587;
   int X;
   int Y;
+  key Press;
 
-  Counter(int tempX, int tempY) {
+  Counter(int tempX, int tempY, key == tempPress) {
     X = tempX;
     Y = tempY;
+    Press = tempPress;
   }
-
-
 
   void advance() {
     stroke(250, 121, 78); // color
@@ -35,6 +35,12 @@ class Counter {
 
     deg = deg + 0.06283185307179587;
     text(((deg - 0.06283185307179587) / 0.06283185307179587), 0, 298);
+  }
+
+  void keyPressed() {
+    if (value == Press) { 
+      advance();
+    }
   }
 }
 

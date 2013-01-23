@@ -5,8 +5,8 @@ void setup() {
   size(300, 300);
   smooth();
   background(#FFFFFF);
-  counter1 =new Counter(width/2, height/2);
-  counter2 =new Counter(width/3, height/3);
+  counter1 =new Counter(width/2, height/2,'e');
+  counter2 =new Counter(width/3, height/3,'r');
 }
 
 void draw() {
@@ -15,7 +15,9 @@ void draw() {
   rect(0, 280, 300, 20);
   fill(250, 121, 78);
   counter1.advance();
+  counter1.keyPressed();
   counter2.advance();
+  counter2.keyPressed();
 }
 
 
